@@ -5,7 +5,7 @@ export default class MainPage extends Component{
   render(){
    return(
     <div>
-       <img src={logo} width="150" height="150" alt="ljfsm" class="Logo"/>
+       <img src={logo} width="400" height="150" alt="ljfsm" class="Logo"/>
     </div>
    );
 
