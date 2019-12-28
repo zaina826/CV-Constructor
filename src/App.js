@@ -5,6 +5,9 @@ import Home from './components/home'
 import Aboutus from './components/aboutus'
 import ContactUs from './components/contact'
 import Navbar from './components/navbar'
+import Result from './components/result'
+import SelectT from './components/selectt'
+import Survey from './components/survey'
 export default class MainPage extends Component{
   render(){
    return(
@@ -12,9 +15,14 @@ export default class MainPage extends Component{
    <div>
    <Navbar/>
    <Switch>
+
    <Route path='/' component={Home} exact />
    <Route path='/Aboutus' component={Aboutus}/>
    <Route path='/ContactUs' component={ContactUs}/>}/>
+   <Route path='/result' component={Result}/>
+   <Route path='/selecttemplate' component={SelectT}/>}/>
+   <Route path='/survey' component={Survey}/>}/>
+
    </Switch>
    </div>
    </BrowserRouter>
