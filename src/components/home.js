@@ -9,7 +9,7 @@ export default class Home extends Component {
                     <header className="App-header">
                          <img src={logo} className="App-logo" alt="logo" />
 
-                         <h1>Easily create an efficient and persuasive CV</h1>
+                         <h4>Easily create an efficient and persuasive CV</h4>
                          <Link className="button_a" to="/SelectTemplate">
                               Start proccess!
                          </Link>

@@ -35,6 +35,8 @@
      color: #09d3ac;
 }
 .button_a {
+     margin-top: 10px;
+     font-size: 20px;
      color: #fff !important;
      text-decoration: none;
      background: #ed3330;
@@ -88,4 +90,47 @@
      text-decoration: none;
      border-style: solid;
      border-width: 1px;
+}
+
+.txtboxes {
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 10px;
+     border: none;
+     height: 15px;
+     width: 300px;
+     display: inline-block;
+     text-decoration: none;
+}
+
+.txtboxes:hover {
+     padding: 15px;
+     border-radius: 20px;
+     border: none;
+     height: 20px;
+     width: 300px;
+     display: inline-block;
+     text-decoration: none;
+     transition: all 0.4s ease 0s;
+}
+.txtboxes_big {
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 10px;
+     border: none;
+     height: 30px;
+     width: 300px;
+     display: inline-block;
+     text-decoration: none;
+}
+
+.txtboxes_big:hover {
+     padding: 15px;
+     border-radius: 20px;
+     border: none;
+     height: 120px;
+     width: 280px;
+     display: inline-block;
+     text-decoration: none;
+     transition: all 0.4s ease 0s;
 }
