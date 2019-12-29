@@ -20,7 +20,7 @@ class ContactUs extends Component {
                               className="txtboxes_big"
                               placeholder="Enter your Messege:"
                          ></textarea>
-                         <button className="button_a">Send Messege</button>
+                         <button className="button_a">Send Messege.</button>
                     </header>
                </div>
           );
