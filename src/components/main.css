@@ -35,6 +35,8 @@
   color: #09d3ac;
 }
 .button_a {
+  margin-top: 10px;
+  font-size: 20px;
   color: #fff !important;
   text-decoration: none;
   background: #ed3330;
@@ -50,5 +52,85 @@
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   box-shadow: 10px 50px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.navbar {
+  background-color: #434343;
+  padding: 10px;
+  margin: auto;
+}
+
+.navbar_e {
+  margin-left: 42%;
+}
+
+.navbar_elmnts {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_elmnts:hover {
+  padding: 10px;
+  margin: 10px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 2px;
+  transition: all 0.4s ease 0s;
+}
+.navbar_elmnts:active {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.txtboxes {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  height: 15px;
+  width: 300px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.txtboxes:hover {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  height: 20px;
+  width: 300px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+}
+.txtboxes_big {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 300px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.txtboxes_big:hover {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  height: 120px;
+  width: 280px;
+  display: inline-block;
+  text-decoration: none;
   transition: all 0.4s ease 0s;
 }
