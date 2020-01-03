@@ -10,7 +10,7 @@ export default class Home extends Component {
                          <img src={logo} className="App-logo" alt="logo" />
 
                          <h1>CV Creator</h1>
-                         <Link className="button_a" to="/page1">
+                         <Link className="button_a" to="/selecttemplate">
                               Start proccess!
                          </Link>
                     </header>
