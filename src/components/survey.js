@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./main.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 export default class Survey extends Component {
-  state = { first: "", middle: "", last: "", finalPath: "" };
+  state = { first: "", middle: "", last: "" };
   handleFirst = e => {
     this.setState({
       first: e.target.value
@@ -16,11 +16,11 @@ export default class Survey extends Component {
   };
   handelLast = e => {
     console.log(e.target.value);
-    this.getLink();
+    // this.getLink();
     this.setState({
       last: e.target.value
     });
-    this.getLink();
+    // this.getLink();
   };
 
   getLink = () => {
@@ -28,13 +28,11 @@ export default class Survey extends Component {
     var middleName = this.state.middle;
     var lastName = this.state.last;
     var fLink = "/res/" + firstName + "/" + middleName + "/" + lastName;
-    this.setState({
-      finalPath: fLink
-    });
+    window.location.href = fLink;
   };
   render() {
     return (
-      <div>
+      <div className="App-header">
         <p>Fill in the following survey</p>
         <h2>JUST FOR TESTING</h2>
         <input
@@ -57,7 +55,10 @@ export default class Survey extends Component {
           onChange={this.handelLast}
           value={this.state.last}
         />
-        <Link to={this.state.finalPath}>GO TO THE NEXT PAGE.</Link>
+        <br />
+        <button className="button_a" onClick={this.getLink}>
+          GO TO THE NEXT PAGE.
+        </button>
       </div>
     );
   }

@@ -8,7 +8,6 @@ import Navbar from "./components/navbar";
 import Result from "./components/result";
 import SelectT from "./components/selectt";
 import Survey from "./components/survey";
-
 export default class MainPage extends Component {
   render() {
     return (
@@ -18,7 +17,7 @@ export default class MainPage extends Component {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/Aboutus" component={Aboutus} />
-            <Route path="/ContactUs" component={ContactUs} />
+            <Route path="/Contactus" component={ContactUs} />
             }/>
             <Route path="/result" component={Result} />
             <Route path="/selecttemplate" component={SelectT} />

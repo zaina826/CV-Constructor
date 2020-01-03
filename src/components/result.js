@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "../Main.css";
+import "./main.css";
 const Res = ({ match }) => (
-  <div>
+  <div className="App-header">
     <h3>ID: {match.params.name}</h3>
     <h3>ID: {match.params.middle}</h3>
 
