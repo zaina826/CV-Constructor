@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import logo from "./logo.png";
-import "./main.css";
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import React,{Component} from 'react';
+import logo from './logo.png'
+import '../main.css'
+import {Link} from "react-router-dom";
 export default class Home extends Component {
      render() {
           return (
@@ -9,8 +9,8 @@ export default class Home extends Component {
                     <header className="App-header">
                          <img src={logo} className="App-logo" alt="logo" />
 
-                         <h1>Easily create an efficient and persuasive CV</h1>
-                         <Link className="button_a" to="/SelectTemplate">
+                         <h1>CV Creator</h1>
+                         <Link className="button_a" to="/page1">
                               Start proccess!
                          </Link>
                     </header>
