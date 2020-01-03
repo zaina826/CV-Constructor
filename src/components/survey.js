@@ -46,7 +46,7 @@ export default class Survey extends Component {
         <br />
         <input
           className="txtboxes"
-          placeholder="Enter your Middle name"
+          placeholder="Enter your Middle name:"
           onChange={this.handelMiddle}
           value={this.state.middle}
         />
