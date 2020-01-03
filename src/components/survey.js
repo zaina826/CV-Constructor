@@ -3,6 +3,7 @@ import "./main.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 export default class Survey extends Component {
   state = { first: "", middle: "", last: "" };
+
   handleFirst = e => {
     this.setState({
       first: e.target.value
@@ -39,21 +40,18 @@ export default class Survey extends Component {
           className="txtboxes"
           placeholder="Enter your First name"
           onChange={this.handleFirst}
-          value={this.state.first}
         />
         <br />
         <input
           className="txtboxes"
           placeholder="Enter your Middle name:"
           onChange={this.handelMiddle}
-          value={this.state.middle}
         />
         <br />
         <input
           className="txtboxes"
           placeholder="Enter your Last name"
           onChange={this.handelLast}
-          value={this.state.last}
         />
         <br />
         <button className="button_a" onClick={this.getLink}>
