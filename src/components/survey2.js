@@ -90,13 +90,14 @@ export default class Survey2 extends Component {
       Profile +
       "/" +
       WE;
-
     window.location.href = fLink;
   };
+
   render() {
     return (
       <div className="App-header">
         <p>Fill in the following survey</p>
+
         <input
           className="txtboxes"
           placeholder="Enter your name"
