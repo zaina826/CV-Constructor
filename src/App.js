@@ -24,7 +24,7 @@ export default class MainPage extends Component {
             <Route path="/Aboutus" component={Aboutus} />
             <Route path="/Contactus" component={ContactUs} />
             }/>
-            <Route path="/result1" component={Res1} />
+            <Route path="/result1/:key" component={Res1} />
             <Route path="/result2" component={Res2} />
             <Route path="/selecttemplate" component={SelectT} />
             }/>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./selectt.css";
+// import "./selectt.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./main.css";
 import template1 from "./template1.jpg";
@@ -12,7 +12,7 @@ export default class SelectT extends Component {
     return (
       <div>
         <a href="/survey1">
-          <img src={template1} height="300" width="500" className="templates" />
+          <img src={template1} height="600" width="800" className="templates" />
         </a>
         <a href="/survey2">
           <img src={template2} height="450" width="380" className="templates" />

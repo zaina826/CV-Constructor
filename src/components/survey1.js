@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./main.css";
+import Firebase from "../FBConfig";
+import Res1 from "./result1";
 export default class Survey1 extends Component {
   state = {
     Name: "",
@@ -83,50 +85,28 @@ export default class Survey1 extends Component {
     });
   };
 
-  getLink = () => {
-    var Name = this.state.Name;
-    var PT = this.state.PT;
-    var PN = this.state.PN;
-    var Gmail = this.state.Gmail;
-    var Address = this.state.Address;
-    var In = this.state.In;
-    var Major = this.state.Major;
-    var NOU = this.state.NOU;
-    var Degree = this.state.Degree;
-    var Skills = this.state.Skills;
-    var Profile = this.state.Profile;
-    var WE = this.state.WE;
-    var JT = this.state.JT;
-
-    var fLink =
-      "/res/" +
-      Name +
-      "/" +
-      PT +
-      "/" +
-      PN +
-      "/" +
-      Gmail +
-      "/" +
-      Address +
-      "/" +
-      In +
-      "/" +
-      Major +
-      "/" +
-      NOU +
-      "/" +
-      Degree +
-      "/" +
-      Skills +
-      "/" +
-      Profile +
-      "/" +
-      WE +
-      "/" +
-      JT;
-
-    window.location.href = fLink;
+  MoveToFB = () => {
+    var key = Firebase.database()
+      .ref("CV")
+      .push({
+        Name: this.state.Name,
+        PT: this.state.PT,
+        PN: this.state.PN,
+        Gmail: this.state.Gmail,
+        Address: this.state.Address,
+        In: this.state.In,
+        Major: this.state.Major,
+        NOU: this.state.NOU,
+        Degree: this.state.Degree,
+        Skills: this.state.Skills,
+        Profile: this.state.Profile,
+        WE: this.state.WE,
+        JT: this.state.JT
+      }).key;
+    var finalLink = "./result1/" + key;
+    setTimeout(() => {
+      window.location.href = finalLink;
+    }, 2000);
   };
   render() {
     return (
@@ -210,8 +190,9 @@ export default class Survey1 extends Component {
           onChange={this.handleJT}
         />
         <br />
-        <button className="button_a" onClick={this.getLink}>
-          GO TO THE NEXT PAGE.
+
+        <button className="button_a" onClick={this.MoveToFB}>
+          GET YOUR CV
         </button>
       </div>
     );
