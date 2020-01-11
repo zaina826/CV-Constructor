@@ -61,30 +61,32 @@ class Res3 extends Component {
           <hr className="line" />
         </div>
 
-        <div className="AllCvs">
-          <div className="CvElmnt_template3">
-            <p className="Cv_title_template3">Proffesional title</p>
-            <h5>{this.state.PT} </h5>
-          </div>
+        <div className="comlumn1">
+          <div className="Cv_container">
+            <div className="CvElmnt">
+              <p className="Cv_title">Proffesional title</p>
+              <h5>{this.state.PT} </h5>
+            </div>
 
-          <div className="CvElmnt_template3">
-            <p className="Cv_title_template3">Major</p>
-            <h5>{this.state.Major} </h5>
-          </div>
+            <div className="CvElmnt">
+              <p className="Cv_title">Major</p>
+              <h5>{this.state.Major} </h5>
+            </div>
 
-          <div className="CvElmnt_template3">
-            <p className="Cv_title_template3">Name of university</p>
-            <h5>{this.state.NameOfUniversity} </h5>
-          </div>
+            <div className="CvElmnt">
+              <p className="Cv_title">Name of university</p>
+              <h5>{this.state.NameOfUniversity} </h5>
+            </div>
 
-          <div className="CvElmnt_template3">
-            <p className="Cv_title_template3">Degrees</p>
-            <h5>{this.state.Degree} </h5>
+            <div className="CvElmnt">
+              <p className="Cv_title">Degrees</p>
+              <h5>{this.state.Degree} </h5>
+            </div>
           </div>
         </div>
-        <div className="AllCvs">
-          <div className="CvElmnt_template3">
-            <p className="Cv_title_template3">Major</p>
+        <div className="column2">
+          <div className="CvElmnt">
+            <p className="Cv_title">Major</p>
             <h5>{this.state.Major} </h5>
           </div>
 
