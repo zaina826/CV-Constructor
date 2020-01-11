@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./main.css";
 import Firebase from "../FBConfig";
-import user_pic from "./user.jpg";
 class Res4 extends Component {
   state = {};
   componentDidMount() {
@@ -24,21 +23,7 @@ class Res4 extends Component {
         var WE = object.WE;
         var JT = object.JT;
         var In = object.In;
-        console.log(
-          object +
-            name +
-            address +
-            PT +
-            PhoneNumber +
-            Gmail +
-            Major +
-            NameOfUniversity +
-            Degree +
-            Skills +
-            Profile +
-            WE +
-            JT
-        );
+        var ProfileP = object.profileP;
 
         this.setState({
           name: name,
@@ -53,15 +38,18 @@ class Res4 extends Component {
           Profile: Profile,
           WE: WE,
           JT: JT,
-          In: In
+          In: In,
+          avatar: ProfileP
         });
+        console.log("avatar:" + this.state.avatar);
+        console.log("ProfileP:" + ProfileP);
       });
   }
   render() {
     return (
       <div className="App-header">
         <div className="LogoAndName">
-          <img className="dev_logo" src={user_pic} />
+          <img className="dev_logo" src={this.state.avatar} />
           <h3>{this.state.name} </h3>
           <h5>
             <h3>

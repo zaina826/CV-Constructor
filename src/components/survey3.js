@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./main.css";
 import Firebase from "../FBConfig";
 import Res3 from "./result3";
+import FileUploader from "react-firebase-file-uploader";
+
 export default class Survey3 extends Component {
   state = {
     Name: "",
@@ -16,7 +18,28 @@ export default class Survey3 extends Component {
     Skills: "",
     Profile: "",
     WE: "",
-    JT: ""
+    JT: "",
+    loadingMessege: ""
+  };
+
+  handleUploadError = error => {
+    this.setState({ isUploading: false });
+    console.error(error);
+  };
+  handleUploadSuccess = filename => {
+    Firebase.storage()
+      .ref("images")
+      .child(filename)
+      .getDownloadURL()
+      .then(url => {
+        console.log(url);
+
+        this.setState({ avatarURL: url });
+      });
+  };
+
+  selImg = e => {
+    console.log(e.target.value);
   };
   handlename = e => {
     this.setState({
@@ -101,9 +124,11 @@ export default class Survey3 extends Component {
         Skills: this.state.Skills,
         Profile: this.state.Profile,
         WE: this.state.WE,
-        JT: this.state.JT
+        JT: this.state.JT,
+        profileP: this.state.avatarURL
       }).key;
-    var finalLink = "./result3/" + key;
+    var finalLink = "./result4/" + key;
+    this.setState({ loadingMessege: "Loading your CV..." });
     setTimeout(() => {
       window.location.href = finalLink;
     }, 2000);
@@ -117,7 +142,20 @@ export default class Survey3 extends Component {
           placeholder="Enter your name"
           onChange={this.handlename}
         />
+        <h5>Choose your profile Photo</h5>
+        <FileUploader
+          className="uploader"
+          accept="image/*"
+          name="avatar"
+          placeholder="select image"
+          randomizeFilename
+          storageRef={Firebase.storage().ref("images")}
+          onUploadError={this.handleUploadError}
+          onUploadSuccess={this.handleUploadSuccess}
+        />
+
         <br />
+
         <input
           className="txtboxes"
           placeholder="Enter your Proffesional title"
@@ -194,6 +232,7 @@ export default class Survey3 extends Component {
         <button className="button_a" onClick={this.MoveToFB}>
           GET YOUR CV
         </button>
+        <h4>{this.state.loadingMessege}</h4>
       </div>
     );
   }
