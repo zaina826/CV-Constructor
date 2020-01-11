@@ -25,17 +25,11 @@ export default class MainPage extends Component {
             <Route path="/Contactus" component={ContactUs} />
             }/>
             <Route path="/result1/:key" component={Res1} />
-            <Route path="/result2" component={Res2} />
+            <Route path="/result2/:key" component={Res2} />
             <Route path="/selecttemplate" component={SelectT} />
             }/>
             <Route path="/survey" component={Survey} />
             }/>
-            <Route
-              path="/res/:Name/:PT/:PN/:Gmail/:Address/:In/:Major/:NOU/:Degree/:Skills/:Profile/:WE/:JT"
-              component={Res1}
-              path="/res/:Name/:PN/:Gmail/:Address/:In/:NOU/:Skills/:Profile/:WE"
-              component={Res2}
-            />
             <Route path="/survey1" component={Survey1} />
             <Route path="/survey2" component={Survey2} />
             <Route path="/survey3" component={Survey3} />

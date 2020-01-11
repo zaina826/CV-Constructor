@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./main.css";
 import Firebase from "../FBConfig";
-import Res1 from "./result1";
 export default class Survey1 extends Component {
   state = {
     Name: "",
@@ -94,7 +93,7 @@ export default class Survey1 extends Component {
         PN: this.state.PN,
         Gmail: this.state.Gmail,
         Address: this.state.Address,
-        In: this.state.In,
+        IN: this.state.IN,
         Major: this.state.Major,
         NOU: this.state.NOU,
         Degree: this.state.Degree,
