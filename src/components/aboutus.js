@@ -1,23 +1,30 @@
 import React, { Component } from "react";
-
-import "./main.css";
+// import fire from "./database";
+import sobhi from "./sobhi.jpg";
+import zaina from "./zaina.jpg";
 export default class Aboutus extends Component {
   render() {
     return (
-      <div className="Contact-header">
-        <h1>ABOUT US</h1>
-        {/* <div className="developers">
-          <div className="contact-content">
-            <img className="personal-logo" src={sobhi} />
-            <h2>Sobhi Ashraf</h2>
-            <button className="button_a"> See Profile</button>
+      <div className="App-header">
+        <p>About us</p>
+        <div className="about_dev">
+          <div className="person">
+            <img className="dev_logo" src={sobhi} />
+            <br />
+            <p className="dev_name">Sobhi Ashraf</p>
+            <a href="/dev/sobhi" className="button_a">
+              See profile
+            </a>
+            <br />
           </div>
-          <div className="contact-content">
-            <img className="personal-logo" src={zaina} />
-            <h2>Zaina Abu Shaban</h2>
+          <br />
+          <div className="person">
+            <img className="dev_logo" src={zaina} />
+            <br />
+            <p>Zaina Abu Shaaban</p>
             <button className="button_a">See profile</button>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
