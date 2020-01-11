@@ -79,11 +79,11 @@
 }
 .button_a {
   margin-top: 10px;
-  font-size: 60px;
+  font-size: 20px;
   color: #fff !important;
   text-decoration: none;
   background: #ed3330;
-  padding: 65px;
+  padding: 10px;
   border-radius: 150px;
   display: inline-block;
   border: none;

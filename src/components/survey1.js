@@ -105,7 +105,7 @@ export default class Survey1 extends Component {
     var finalLink = "./result1/" + key;
     setTimeout(() => {
       window.location.href = finalLink;
-    }, 2000);
+    }, 1000);
   };
   render() {
     return (
