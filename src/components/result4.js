@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./result4.css";
+
+import "./result3.css";
 import Firebase from "../FBConfig";
-import user_pic from "./user.jpg";
+
 class Res4 extends Component {
   state = {};
   componentDidMount() {
@@ -24,21 +25,7 @@ class Res4 extends Component {
         var WE = object.WE;
         var JT = object.JT;
         var In = object.In;
-        console.log(
-          object +
-            name +
-            address +
-            PT +
-            PhoneNumber +
-            Gmail +
-            Major +
-            NameOfUniversity +
-            Degree +
-            Skills +
-            Profile +
-            WE +
-            JT
-        );
+        var ProfileP = object.profileP;
 
         this.setState({
           name: name,
@@ -53,70 +40,27 @@ class Res4 extends Component {
           Profile: Profile,
           WE: WE,
           JT: JT,
-          In: In
+          In: In,
+          avatar: ProfileP
         });
       });
   }
   render() {
     return (
-      <div className="App-header">
-        <div className="LogoAndName">
-          <img className="dev_logo" src={user_pic} />
-          <h3>{this.state.name} </h3>
-          <h5>
-            <h3>
-              <br />
-            </h3>
-            {this.state.address} | {this.state.Gmail} | {this.state.PhoneNumber}{" "}
-          </h5>
-
-          <hr className="line" />
-        </div>
-
-        <div className="column1">
-          <div className="Cv_container">
-            <div className="CvElmnt">
-              <p className="Cv_title">Proffesional title</p>
-              <h5>{this.state.PT} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Name of university</p>
-              <h5>{this.state.NameOfUniversity} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Degrees</p>
-              <h5>{this.state.Degree} </h5>
-            </div>
-          </div>
-          <div className="column2">
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Skills</p>
-              <h5>{this.state.Skills} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Work experiance</p>
-              <h5>{this.state.WE} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Jop title</p>
-              <h5>{this.state.JT} </h5>
-            </div>
-          </div>
-        </div>
+      <div>
+        <img src={this.state.avatar} />
+        <h3>{this.state.name}</h3>
+        <h3>{this.state.PT}</h3>
+        <h3>{this.state.PhoneNumber}</h3>
+        <h3>{this.state.Gmail}</h3>
+        <h3>{this.state.Major}</h3>
+        <h3>{this.state.NameOfUniversity}</h3>
+        <h3>{this.state.Degree}</h3>
+        <h3>{this.state.Skills}</h3>
+        <h3>{this.state.Profile}</h3>
+        <h3>{this.state.WE}</h3>
+        <h3>{this.state.JT}</h3>
+        <h3>{this.state.IN}</h3>
       </div>
     );
   }

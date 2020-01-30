@@ -1,7 +1,65 @@
-.LogoAndName {
-  background-image: url("./back.jpg");
+.background {
+  background-color: blanchedalmond;
+}
+.bothflexes {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+.maininfo {
   display: flex;
   flex-direction: column;
+  background-color: #fbc326;
+  width: 20%;
+  padding: 60px;
+}
+.otherinfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #dc7c15;
+  width: 80%;
+}
+.profilepic {
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  transition: all 0.4s ease 0s;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+.profilepic:hover {
+  width: 260px;
+  height: 260px;
+}
+html h1 {
+  font-size: 70px;
+  font-family: Verdana;
+}
+html h2 {
+  font-size: 35px;
+  background-color: #1d7d9e;
+}
+.h2s {
+  font-family: Verdana;
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+.smallimage {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.socialmedia {
+  width: 105px;
+  height: 105px;
+  margin: 10px;
+  margin-top: 10px;
+}
+/* .LogoAndName {
+  background: bisque;
+  display: flex;
+  flex-direction: column
   align-items: center;
   width: 100%;
 }
@@ -30,4 +88,4 @@
 
 .cv_info {
   font-size: small;
-}
+} */
