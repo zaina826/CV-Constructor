@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import fire from "./database";
 import sobhi from "./sobhi.jpg";
 import zaina from "./zaina.jpg";
+import "./main.css";
 export default class Aboutus extends Component {
   render() {
     return (

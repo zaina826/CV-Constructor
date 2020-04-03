@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./main.css";
 import Firebase from "../FBConfig";
-import Res3 from "./result3";
 import FileUploader from "react-firebase-file-uploader";
 
 export default class Survey3 extends Component {
@@ -11,11 +10,16 @@ export default class Survey3 extends Component {
     PN: "",
     Gmail: "",
     Address: "",
-    In: "",
+    Facebook: "",
+    Instagram: "",
     Major: "",
     NOU: "",
     Degree: "",
-    Skills: "",
+    Skills1: "",
+    Skills2: "",
+    Skills3: "",
+    Skills4: "",
+    Skills5: "",
     Profile: "",
     WE: "",
     JT: "",
@@ -32,15 +36,10 @@ export default class Survey3 extends Component {
       .child(filename)
       .getDownloadURL()
       .then(url => {
-        console.log(url);
-
         this.setState({ avatarURL: url });
       });
   };
 
-  selImg = e => {
-    console.log(e.target.value);
-  };
   handlename = e => {
     this.setState({
       Name: e.target.value
@@ -67,9 +66,14 @@ export default class Survey3 extends Component {
       Address: e.target.value
     });
   };
-  handlein = e => {
+  handleFacebook = e => {
     this.setState({
-      In: e.target.value
+      Facebook: e.target.value
+    });
+  };
+  handleInstagram = e => {
+    this.setState({
+      Instagram: e.target.value
     });
   };
   handlemajor = e => {
@@ -87,9 +91,29 @@ export default class Survey3 extends Component {
       Degree: e.target.value
     });
   };
-  handleskills = e => {
+  handleskills1 = e => {
     this.setState({
-      Skills: e.target.value
+      Skills1: e.target.value
+    });
+  };
+  handleskills2 = e => {
+    this.setState({
+      Skills2: e.target.value
+    });
+  };
+  handleskills3 = e => {
+    this.setState({
+      Skills3: e.target.value
+    });
+  };
+  handleskills4 = e => {
+    this.setState({
+      Skills4: e.target.value
+    });
+  };
+  handleskills5 = e => {
+    this.setState({
+      Skills5: e.target.value
     });
   };
   handleprofile = e => {
@@ -117,17 +141,22 @@ export default class Survey3 extends Component {
         PN: this.state.PN,
         Gmail: this.state.Gmail,
         Address: this.state.Address,
-        In: this.state.In,
+        Facebook: this.state.Facebook,
+        Instagram: this.state.Instagram,
         Major: this.state.Major,
         NOU: this.state.NOU,
         Degree: this.state.Degree,
-        Skills: this.state.Skills,
+        Skills1: this.state.Skills1,
+        Skills2: this.state.Skills2,
+        Skills3: this.state.Skills3,
+        Skills4: this.state.Skills4,
+        Skills5: this.state.Skills5,
         Profile: this.state.Profile,
         WE: this.state.WE,
         JT: this.state.JT,
         profileP: this.state.avatarURL
       }).key;
-    var finalLink = "./result4/" + key;
+    var finalLink = "./result3/" + key;
     this.setState({ loadingMessege: "Loading your CV..." });
     setTimeout(() => {
       window.location.href = finalLink;
@@ -158,7 +187,7 @@ export default class Survey3 extends Component {
 
         <input
           className="txtboxes"
-          placeholder="Enter your Proffesional title"
+          placeholder="Enter your your current position/job"
           onChange={this.handlePT}
         />
         <br />
@@ -182,8 +211,14 @@ export default class Survey3 extends Component {
         <br />
         <input
           className="txtboxes"
-          placeholder="Enter your IN"
-          onChange={this.handlein}
+          placeholder="Enter your Facebook link"
+          onChange={this.handleFacebook}
+        />
+        <br />
+        <input
+          className="txtboxes"
+          placeholder="Enter your Instagram link"
+          onChange={this.handleInstagram}
         />
         <br />
         <input
@@ -194,7 +229,7 @@ export default class Survey3 extends Component {
         <br />
         <input
           className="txtboxes"
-          placeholder="Enter the name of ypur university"
+          placeholder="Enter the name of your university"
           onChange={this.handleNOU}
         />
         <br />
@@ -206,12 +241,36 @@ export default class Survey3 extends Component {
         <br />
         <input
           className="txtboxes"
-          placeholder="Enter your skills"
-          onChange={this.handleskills}
+          placeholder="Enter your first skill"
+          onChange={this.handleskills1}
         />
         <br />
         <input
           className="txtboxes"
+          placeholder="Enter another skill"
+          onChange={this.handleskills2}
+        />
+        <br />
+        <input
+          className="txtboxes"
+          placeholder="Enter another skill (optional)"
+          onChange={this.handleskills3}
+        />
+        <br />
+        <input
+          className="txtboxes"
+          placeholder="Enter another skill (optional)"
+          onChange={this.handleskills4}
+        />
+        <br />
+        <input
+          className="txtboxes"
+          placeholder="Enter another skill (optional)"
+          onChange={this.handleskills5}
+        />
+        <br />
+        <input
+          className="txtboxes_big"
           placeholder="Enter your Profile"
           onChange={this.handleprofile}
         />

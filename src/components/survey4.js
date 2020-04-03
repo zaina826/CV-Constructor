@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import "./template3.css";
+import "./main.css";
 import Firebase from "../FBConfig";
-import Res4 from "./result4";
 import FileUploader from "react-firebase-file-uploader";
 
 export default class Survey4 extends Component {
@@ -11,7 +10,7 @@ export default class Survey4 extends Component {
     PN: "",
     Gmail: "",
     Address: "",
-    In: "",
+    Facebook: "",
     Major: "",
     NOU: "",
     Degree: "",
@@ -32,15 +31,10 @@ export default class Survey4 extends Component {
       .child(filename)
       .getDownloadURL()
       .then(url => {
-        console.log(url);
-
         this.setState({ avatarURL: url });
       });
   };
 
-  selImg = e => {
-    console.log(e.target.value);
-  };
   handlename = e => {
     this.setState({
       Name: e.target.value
@@ -67,9 +61,9 @@ export default class Survey4 extends Component {
       Address: e.target.value
     });
   };
-  handlein = e => {
+  handleFacebook = e => {
     this.setState({
-      In: e.target.value
+      Facebook: e.target.value
     });
   };
   handlemajor = e => {
@@ -117,7 +111,7 @@ export default class Survey4 extends Component {
         PN: this.state.PN,
         Gmail: this.state.Gmail,
         Address: this.state.Address,
-        In: this.state.In,
+        Facebook: this.state.Facebook,
         Major: this.state.Major,
         NOU: this.state.NOU,
         Degree: this.state.Degree,
@@ -182,8 +176,8 @@ export default class Survey4 extends Component {
         <br />
         <input
           className="txtboxes"
-          placeholder="Enter your IN"
-          onChange={this.handlein}
+          placeholder="Enter your Facebook"
+          onChange={this.handleFacebook}
         />
         <br />
         <input
