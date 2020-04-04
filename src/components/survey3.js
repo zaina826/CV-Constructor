@@ -21,12 +21,16 @@ export default class Survey3 extends Component {
     Skills4: "",
     Skills5: "",
     Profile: "",
+<<<<<<< HEAD
     job1: "",
     jdate1: "",
     job2: "",
     jdate2: "",
     job3: "",
     jdate3: "",
+=======
+    WE: "",
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
     JT: "",
     loadingMessege: ""
   };
@@ -116,6 +120,7 @@ export default class Survey3 extends Component {
       Skills4: e.target.value
     });
   };
+<<<<<<< HEAD
   handleprofile = e => {
     this.setState({
       Profile: e.target.value
@@ -149,6 +154,21 @@ export default class Survey3 extends Component {
   handlejdate3 = e => {
     this.setState({
       jdate3: e.target.value
+=======
+  handleskills5 = e => {
+    this.setState({
+      Skills5: e.target.value
+    });
+  };
+  handleprofile = e => {
+    this.setState({
+      Profile: e.target.value
+    });
+  };
+  handleWE = e => {
+    this.setState({
+      WE: e.target.value
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
     });
   };
   handleJT = e => {
@@ -175,6 +195,7 @@ export default class Survey3 extends Component {
         Skills2: this.state.Skills2,
         Skills3: this.state.Skills3,
         Skills4: this.state.Skills4,
+<<<<<<< HEAD
         Profile: this.state.Profile,
         job1: this.state.job1,
         jdate1: this.state.jdate1,
@@ -182,6 +203,11 @@ export default class Survey3 extends Component {
         jdate2: this.state.jdate2,
         job3: this.state.job3,
         jdate3: this.state.jdate3,
+=======
+        Skills5: this.state.Skills5,
+        Profile: this.state.Profile,
+        WE: this.state.WE,
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
         JT: this.state.JT,
         profileP: this.state.avatarURL
       }).key;
@@ -219,6 +245,10 @@ export default class Survey3 extends Component {
           placeholder="Enter your your current position/job"
           onChange={this.handlePT}
         />
+<<<<<<< HEAD
+=======
+        <br />
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
         <input
           className="txtboxes"
           placeholder="Enter your Phone Number"
@@ -292,6 +322,15 @@ export default class Survey3 extends Component {
         />
         <br />
         <input
+<<<<<<< HEAD
+=======
+          className="txtboxes"
+          placeholder="Enter another skill (optional)"
+          onChange={this.handleskills5}
+        />
+        <br />
+        <input
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
           className="txtboxes_big"
           placeholder="Enter your Profile"
           onChange={this.handleprofile}
@@ -299,6 +338,7 @@ export default class Survey3 extends Component {
         <br />
         <input
           className="txtboxes"
+<<<<<<< HEAD
           placeholder="Enter job #1"
           onChange={this.handlejob1}
         />
@@ -326,6 +366,10 @@ export default class Survey3 extends Component {
           className="txtboxes"
           placeholder="Worked from - to"
           onChange={this.handlejdate3}
+=======
+          placeholder="Enter your work experience"
+          onChange={this.handleWE}
+>>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
         />
         <br />
         <input
