@@ -31,7 +31,6 @@ class Res3 extends Component {
         var Skills2 = object.Skills2;
         var Skills3 = object.Skills3;
         var Skills4 = object.Skills4;
-<<<<<<< HEAD
         var Profile = object.Profile;
         var job1 = object.job1;
         var jdate1 = object.jdate1;
@@ -39,11 +38,8 @@ class Res3 extends Component {
         var jdate2 = object.jdate2;
         var job3 = object.job3;
         var jdate3 = object.jdate3;
-=======
-        var Skills5 = object.Skills5;
         var Profile = object.Profile;
         var WE = object.WE;
->>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
         var JT = object.JT;
         var ProfileP = object.profileP;
 
@@ -60,7 +56,6 @@ class Res3 extends Component {
           Skills2: Skills2,
           Skills3: Skills3,
           Skills4: Skills4,
-<<<<<<< HEAD
           Profile: Profile,
           Facebook: facebook,
           Instagram: insta,
@@ -70,13 +65,10 @@ class Res3 extends Component {
           jdate2: jdate2,
           job3: job3,
           jdate3: jdate3,
-=======
-          Skills5: Skills5,
           Profile: Profile,
           Facebook: facebook,
           Instagram: insta,
           WE: WE,
->>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
           JT: JT,
           avatar: ProfileP
         });
@@ -101,19 +93,12 @@ class Res3 extends Component {
               <img src={locationlogo} className="smallimage" />
               {this.state.address}{" "}
             </h2>
-<<<<<<< HEAD
             <h2 className="gmail">
               <img src={gmaillogo} className="smallimage" />
               {this.state.Gmail}
             </h2>
             <div className="Socialm">
-=======
-            <h2>
-              <img src={gmaillogo} className="smallimage" />
-              {this.state.Gmail}
-            </h2>
-            <div>
->>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
+
               <a href={this.state.Facebook}>
                 <img src={fb} className="socialmedia" />
               </a>
@@ -125,7 +110,6 @@ class Res3 extends Component {
           <br />
           <br />
           <div className="otherinfo">
-<<<<<<< HEAD
             <h1>
               <mark>{this.state.name}</mark>
             </h1>
@@ -147,22 +131,7 @@ class Res3 extends Component {
               <h3>{this.state.job2}<h3>(<mark>{this.state.jdate2}</mark>)</h3></h3>
               <h3>{this.state.job3}<h3>(<mark>{this.state.jdate3}</mark>)</h3></h3>
             </div>
-=======
-            <h1>{this.state.name}</h1>
-            <h3>{this.state.PT}</h3>
-            <h3>{this.state.Major}</h3>
-            <h3>{this.state.NameOfUniversity}</h3>
-            <h3>{this.state.Degree}</h3>
-            <h3>{this.state.Skills1}</h3>
-            <h3>{this.state.Skills2}</h3>
-            <h3>{this.state.Skills3}</h3>
-            <h3>{this.state.Skills4}</h3>
-            <h3>{this.state.Skills5}</h3>
-            <h3>{this.state.Profile}</h3>
-            <h3>{this.state.WE}</h3>
-            <h3>{this.state.JT}</h3>
-            <h3>{this.state.In}</h3>
->>>>>>> 6ce2b3edbd82375a3712a45a29ea6e92bd731c82
+
           </div>
         </div>
       </div>
