@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import "./main.css";
+import fire from "./database";
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 class ContactUs extends Component {
+  componentDidMount() {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        console.log("user logged");
+      } else {
+        window.location.href = "./login";
+      }
+    });
+  }
+
   render() {
     return (
       <div className="App">

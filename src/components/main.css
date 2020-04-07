@@ -1,65 +1,281 @@
-html body {
+.App {
   text-align: center;
-  background-image: url("bgimg.jpg");
-  width: 70%;
-  width: 100%;
+}
+
+html, body, #fullheight {
+  min-height: 100% !important;
   height: 100%;
 }
-html h1 {
-  font-size: 70px;
-  font-family: Verdana;
-}
-html h2 {
-  font-family: Verdana;
+#fullheight {
+  width: 250px;
+  background: blue;
 }
 
 .App-logo {
-  height: 250px;
-  color: black;
+  height: 25vmin;
+  color: #fff !important;
   text-decoration: none;
   padding: 5px;
   border-radius: 10px;
+  display: inline-block;
   border: none;
-  transition: all 0.5s ease 0s;
-  margin-bottom: 2px;
+  transition: all 0.4s ease 0s;
+}
+
+ .LogoAndName {
+  background-image: url("./backgr.jpg") ; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+}
+
+
+.template2MainDiv {
+
+display: -webkit-inline-box;
+background-color: #282c34;
+width: 100%;
+height: 100%;
+min-height: 100% !important;
+height: 100%;
+color:white  
+
+}
+.template2SecondaryDiv {
+  min-height: 100% !important;
+  border-radius: 20px;
+  height: 100%;
+  float: center;
+  align-items: center;
+  height: 100%;
+  width:300px;
+  transition: all 0.4s ease 0s;
+  align-content: center;
+  margin: 10px;
+  color:white  
+
+}
+
+.template2SecondaryDiv:hover{
+  transition: all 0.4s ease 0s;
+  background-color: #34495e
+}
+.template2MainDivElmnts{
+      align-items: center;
+      margin-left: 10%;
+      font-size:20px
+}
+
+.template2MainDiv {
+
+display: -webkit-inline-box;
+background-color: #282c34;
+width: 100%;
+height: 100%;
+min-height: 100% !important;
+height: 100%;
+color:white  
+
+}
+.template2SecondaryDiv {
+  min-height: 100% !important;
+  border-radius: 20px;
+  height: 100%;
+  float: center;
+  align-items: center;
+  height: 100%;
+  width:300px;
+  transition: all 0.4s ease 0s;
+  align-content: center;
+  margin: 10px;
+  color:white  
+
+}
+
+.template2SecondaryDiv:hover{
+  transition: all 0.4s ease 0s;
+  background-color: #34495e
+}
+.template2MainDivElmnts{
+      align-items: center;
+      margin-left: 10%;
+      font-size:20px
+}
+
+
+.template3MainDiv {
+
+  display: -webkit-inline-box;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 100% !important;
+  height: 100%;
+  color:white  
+  
+  }
+  .template3SecondaryDiv {
+    min-height: 100% !important;
+    border-radius: 20px;
+    height: 100%;
+    float: center;
+    align-items: center;
+    height: 100%;
+    width:300px;
+    transition: all 0.4s ease 0s;
+    align-content: center;
+    margin: 10px;
+    color:black ;
+    background-color:#ecf0f1;
+  
+  }
+  
+  .template3SecondaryDiv:hover{
+    transition: all 0.4s ease 0s;
+    background-color: #95a5a6
+  }
+  .template3MainDivElmnts{
+        align-items: center;
+        margin-left: 10%;
+        font-size:20px
+  }
+.AllCvs {
+  display: flex;
+  flex-direction: row;
+}
+.CvElmnt {
+  margin: 20px;
+  background-color: #2c3e50;
+  align-items: center;
+  border: 2px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 250px;
+  height: 300px;
+}
+.Cv_title {
+  background-color: #34495e;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+.cv_info {
+  font-size: small;
+} 
+
+.CvElmntLight {
+  margin: 20px;
+  background-color: #f5f6fa;
+  align-items: center;
+  border: 2px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 250px;
+  height: 300px;
+  -webkit-box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+transition: all 0.4s ease 0s;
+}
+
+.TextWithShadow{
+  -webkit-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+background-color:black;
+opacity: 0.8;
+border-radius: 20px;
+transition: all 0.4s ease 0s;
+
+}
+
+.TextWithShadow:hover{
+  -webkit-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+background-color:black;
+opacity: 0.9;
+border-radius: 5px;
+transition: all 0.4s ease 0s;
+
+}
+.CvElmntLight:hover{
+background-color:#2c3e50;
+-webkit-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
+transition: all 0.4s ease 0s;
+color:white
+}
+.Cv_titleLight {
+  background-color: #dcdde1;
+  align-items: center;
+  padding: 10px;
+  color:black;
+  border-radius: 20px;
+  text-align: center;
+
+  transition: all 0.4s ease 0s;
+
+}
+.Cv_titleLight:hover {
+  background-color: #34495e;
+  align-items: center;
+  padding: 10px;
+  color:white;
+  border-radius: 20px;
+  transition: all 0.4s ease 0s;
+
+}
+.DarkText{
+  color:black;
+  transition: all 0.4s ease 0s;
+  text-align: center;
+
+
+}
+.LogoAndNameTemplate4 {
+  background-image: url("./back4.jpg") ; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+}
+
+.DarkText:hover{
+  color:white;
+  transition: all 0.4s ease 0s;
+
 }
 .App-logo:hover {
-  height: 300px;
-  transition: all 0.4s ease 0s;
-}
-.A {
-  letter-spacing: 5px;
-  font-family: sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #308695;
-  text-decoration: none;
-  padding: 70px;
-  border-radius: 60px;
-  transition: all 0.4s ease 0s;
-  color: black;
-}
-.A:hover {
+  height: 30vmin;
   background: #434343;
-  letter-spacing: 10px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 10px 50px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s;
 }
-.B {
-  color: #455054;
-  font-size: 45px;
-  margin-top: 0px;
-}
-.App-header1 {
+.App-header {
   background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-headerLight {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 .App-link {
   color: #09d3ac;
 }
@@ -69,34 +285,42 @@ html h2 {
   color: #fff !important;
   text-decoration: none;
   background: #ed3330;
+  padding: 5px;
+  border-radius: 10px;
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
 }
+.button_a:hover {
+  background: #434343;
+  letter-spacing: 5px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 10px 50px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
 
 .navbar {
-  background-color: #308695;
-  padding: 20px;
-}
-
-.navbar_e {
-  margin-right: 50%;
-  margin-bottom: 0px;
-}
-
-.navbar_pic {
-  margin-top: 50%;
-}
-.navbar_elmnts {
-  margin: 40px;
-  font-size: 25px;
-  color: white;
-  text-decoration: none;
+  background-color: #434343;
+  padding: 10px;
+  margin: auto;
   align-items: center;
 }
 
+.navbar_e {
+  margin-left: 40%;
+  align-items: center;
+}
+
+.navbar_elmnts {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+}
+
 .navbar_elmnts:hover {
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
   color: black;
   background-color: white;
@@ -204,7 +428,7 @@ html h2 {
   height: 30vmin;
   color: #fff !important;
   text-decoration: none;
-  border-radius: 0%;
+  border-radius: 50%;
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
@@ -212,6 +436,25 @@ html h2 {
 
 .dev_logo:hover {
   height: 40vmin;
+  background: #434343;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 10px 50px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.dev_logoT2 {
+  height: 20vmin;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.dev_logoT2:hover {
+  height: 25vmin;
   background: #434343;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
@@ -237,48 +480,4 @@ html h2 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
-}
-
-.LogoAndName {
-  background: bisque;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.AllCvs {
-  display: flex;
-  flex-direction: row;
-}
-
-.CvElmnt {
-  margin: 20px;
-  background-color: #2c3e50;
-  align-items: center;
-  border: 2px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 250px;
-  height: 300px;
-}
-.Cv_title {
-  background-color: #34495e;
-  align-items: center;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.cv_info {
-  font-size: small;
-}
-
-.uploader {
-  border-width: 2px;
-  border: solid;
-  border-radius: 20px;
-  background-color: white;
-  color: black;
-  border-color: white;
-  margin: 10px;
 }
