@@ -7,9 +7,9 @@ class Result3 extends Component {
   state = {};
   componentDidMount() {
     var key = this.props.match.params.key;
-
+    var uid = this.props.match.params.uid;
     Firebase.database()
-      .ref("CV/" + key)
+      .ref("CV/" + uid + "/" + key)
       .on("value", list => {
         var object = list.val();
         var name = object.Name;
@@ -71,50 +71,58 @@ class Result3 extends Component {
 
 
           <div className="AllCvs">
-            <div className="CvElmnt">
-              <p className="Cv_title">Proffesional title</p>
-              <h5>{this.state.PT} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Proffesional title</p>
+              <h5 className='DarkText'>{this.state.PT} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Major</p>
+              <h5 className='DarkText'>{this.state.Major} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Name of university</p>
-              <h5>{this.state.NameOfUniversity} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Name of university</p>
+              <h5 className='DarkText'>{this.state.NameOfUniversity} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Degrees</p>
-              <h5>{this.state.Degree} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Degrees</p>
+              <h5 className='DarkText'>{this.state.Degree} </h5>
             </div>
           </div>
           <div className="AllCvs">
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Major</p>
+              <h5 className='DarkText'>{this.state.Major} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Skills</p>
-              <h5>{this.state.Skills} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Skills</p>
+              <h5 className='DarkText'>{this.state.Skills} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Work experiance</p>
-              <h5>{this.state.WE} </h5>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Work experiance</p>
+              <h5 className='DarkText'>{this.state.WE} </h5>
             </div>
 
-            <div className="CvElmnt">
-              <p className="Cv_title">Jop title</p>
+            <div className="CvElmntLight">
+              <p className="Cv_titleLight">Jop title</p>
 
-              <h5>{this.state.JT} </h5>
+              <h5 className='DarkText'>{this.state.JT} </h5>
             </div>
           </div>
 
+          <div className="Footer">
+            <a className='FooterObj' href={"/template1/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template1</a>
+            <a className='FooterObj' href={"/template2/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template2</a>
+            <a className='FooterObj' href={"/template3/" + this.props.match.params.uid + "/" + this.props.match.params.key} > Template3</a>
+            <a className='FooterObj' href={"/template4/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template4</a>
+          </div>
+
         </div>
+
 
 
 

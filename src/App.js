@@ -14,6 +14,9 @@ import Survey from "./components/survey";
 import Login from "./components/login";
 import fire from "./components/database";
 import Sobhi from "./components/sobhi";
+import LatestCvs from "./components/MyLatestCvs"
+
+
 export default class MainPage extends Component {
   render() {
     return (
@@ -25,12 +28,14 @@ export default class MainPage extends Component {
             <Route path="/Aboutus" component={Aboutus} />
             <Route path="/Contactus" component={ContactUs} />
             <Route path="/login" component={Login} />
+            <Route path="/MyCvs" component={LatestCvs} />
+
             <Route path="/dev/sobhi" component={Sobhi} />
             }/>
-            <Route path="/template1/:key" component={Result1} />
-            <Route className='FullHeight' path="/template2/:key" component={Result2} />
-            <Route className='FullHeight' path="/template3/:key" component={Result3} />
-            <Route className='FullHeight' path="/template4/:key" component={Result4} />
+            <Route path="/template1/:uid/:key" component={Result1} />
+            <Route className='FullHeight' path="/template2/:uid/:key" component={Result2} />
+            <Route className='FullHeight' path="/template3/:uid/:key" component={Result3} />
+            <Route className='FullHeight' path="/template4/:uid/:key" component={Result4} />
 
 
             <Route path="/selecttemplate" component={SelectT} />

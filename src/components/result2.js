@@ -7,9 +7,9 @@ class Result1 extends Component {
   state = {};
   componentDidMount() {
     var key = this.props.match.params.key;
-
+    var uid = this.props.match.params.uid;
     Firebase.database()
-      .ref("CV/" + key)
+      .ref("CV/" + uid + "/" + key)
       .on("value", list => {
         var object = list.val();
         var name = object.Name;
@@ -113,6 +113,14 @@ class Result1 extends Component {
               <h5>{this.state.JT} </h5>
             </div>
           </div>
+
+          <div className="Footer">
+            <a className='FooterObj' href={"/template1/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template1</a>
+            <a className='FooterObj' href={"/template2/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template2</a>
+            <a className='FooterObj' href={"/template3/" + this.props.match.params.uid + "/" + this.props.match.params.key} > Template3</a>
+            <a className='FooterObj' href={"/template4/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template4</a>
+          </div>
+
 
         </div>
 

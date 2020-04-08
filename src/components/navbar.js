@@ -17,7 +17,9 @@ export default class Navbar extends Component {
           <NavLink className="navbar_elmnts" to="/contactus">
             Contact
           </NavLink>
-
+          <NavLink className="navbar_elmnts" to="/MyCvs">
+            My Latest cvs
+          </NavLink>
         </div>
       </div>
     );

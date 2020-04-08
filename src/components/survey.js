@@ -105,7 +105,7 @@ export default class Survey1 extends Component {
 
   MoveToFB = () => {
     var key = Firebase.database()
-      .ref("CV")
+      .ref("CV/" + Firebase.auth().currentUser.uid)
       .push({
         Name: this.state.Name,
         PT: this.state.PT,
@@ -122,7 +122,7 @@ export default class Survey1 extends Component {
         JT: this.state.JT,
         profileP: this.state.avatarURL
       }).key
-    var finalLink = "/" + this.props.match.params.template + "/" + key;
+    var finalLink = "/" + this.props.match.params.template + "/" + Firebase.auth().uid + "/" + key;
     console.log(this.props.match.params.template)
     this.setState({ loadingMessege: "Loading your CV..." });
     setTimeout(() => {
