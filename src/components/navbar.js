@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./main.css";
-import logo from "./logo.png";
+import fire from "./database";
 export default class Navbar extends Component {
+
   render() {
     return (
       <div className="navbar">
         <div className="navbar_e">
-          <NavLink className="elmnts" to="/">
-            <img src={logo} height="70" />
-          </NavLink>
           <NavLink className="navbar_elmnts" to="/">
             Home
           </NavLink>
@@ -18,6 +16,9 @@ export default class Navbar extends Component {
           </NavLink>
           <NavLink className="navbar_elmnts" to="/contactus">
             Contact
+          </NavLink>
+          <NavLink className="navbar_elmnts" to="/MyCvs">
+            My Latest cvs
           </NavLink>
         </div>
       </div>

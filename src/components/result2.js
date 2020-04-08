@@ -1,15 +1,15 @@
+
+
 import React, { Component } from "react";
-
-import "./result3.css";
-import Firebase from "../FBConfig";
-
-class Res2 extends Component {
+import Firebase from "./database";
+import './main.css'
+class Result1 extends Component {
   state = {};
   componentDidMount() {
     var key = this.props.match.params.key;
-
+    var uid = this.props.match.params.uid;
     Firebase.database()
-      .ref("CV/" + key)
+      .ref("CV/" + uid + "/" + key)
       .on("value", list => {
         var object = list.val();
         var name = object.Name;
@@ -43,70 +43,93 @@ class Res2 extends Component {
           In: In,
           avatar: ProfileP
         });
-        console.log("avatar:" + this.state.avatar);
-        console.log("ProfileP:" + ProfileP);
       });
   }
   render() {
     return (
-      <div className="App-header">
-        <div className="LogoAndName">
-          <img className="dev_logo" src={this.state.avatar} />
-          <h3>{this.state.name} </h3>
-          <h5>
-            <h3>
-              <br />
-            </h3>
-            {this.state.address} | {this.state.Gmail} | {this.state.PhoneNumber}{" "}
-          </h5>
-          <hr className="line" />
+      <div className="template2MainDiv">
+
+
+        <div className='template2SecondaryDiv' >
+          <img className="dev_logoT2" src={this.state.avatar} />
+
+          <h1 className='template2MainDivElmnts'>{this.state.name}</h1>
+          <hr />
+          <h1 className='template2MainDivElmnts'>{this.state.address}</h1>
+          <hr />
+          <h1 className='template2MainDivElmnts'>{this.state.PhoneNumber}</h1>
+          <hr />
+          <h1 className='template2MainDivElmnts'>{this.state.Gmail}</h1>
+          <hr />
+          <h1 className='template2MainDivElmnts'>{this.state.In}</h1>
+
+
         </div>
 
-        <div className="AllCvs">
-          <div className="CvElmnt">
-            <p className="Cv_title">Proffesional title</p>
-            <h5>{this.state.PT} </h5>
+
+        <div className='template2MainDivElmnts'>
+
+
+          <div className="AllCvs">
+            <div className="CvElmnt">
+              <p className="Cv_title">Proffesional title</p>
+              <h5>{this.state.PT} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Major</p>
+              <h5>{this.state.Major} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Name of university</p>
+              <h5>{this.state.NameOfUniversity} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Degrees</p>
+              <h5>{this.state.Degree} </h5>
+            </div>
+          </div>
+          <div className="AllCvs">
+            <div className="CvElmnt">
+              <p className="Cv_title">Major</p>
+              <h5>{this.state.Major} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Skills</p>
+              <h5>{this.state.Skills} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Work experiance</p>
+              <h5>{this.state.WE} </h5>
+            </div>
+
+            <div className="CvElmnt">
+              <p className="Cv_title">Jop title</p>
+
+              <h5>{this.state.JT} </h5>
+            </div>
           </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Major</p>
-            <h5>{this.state.Major} </h5>
+          <div className="Footer">
+            <a className='FooterObj' href={"/template1/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template1</a>
+            <a className='FooterObj' href={"/template2/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template2</a>
+            <a className='FooterObj' href={"/template3/" + this.props.match.params.uid + "/" + this.props.match.params.key} > Template3</a>
+            <a className='FooterObj' href={"/template4/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template4</a>
+            <a className='FooterObj' href={"/template5/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template5</a>
+
           </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Name of university</p>
-            <h5>{this.state.NameOfUniversity} </h5>
-          </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Degrees</p>
-            <h5>{this.state.Degree} </h5>
-          </div>
         </div>
-        <div className="AllCvs">
-          <div className="CvElmnt">
-            <p className="Cv_title">Major</p>
-            <h5>{this.state.Major} </h5>
-          </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Skills</p>
-            <h5>{this.state.Skills} </h5>
-          </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Work experiance</p>
-            <h5>{this.state.WE} </h5>
-          </div>
 
-          <div className="CvElmnt">
-            <p className="Cv_title">Jop title</p>
-
-            <h5>{this.state.JT} </h5>
-          </div>
-        </div>
       </div>
     );
   }
 }
-export default Res2;
+export default Result1;

@@ -1,15 +1,20 @@
+
+
 import React, { Component } from "react";
+import Firebase from "./database";
 
-import "./result3.css";
-import Firebase from "../FBConfig";
-
-class Res4 extends Component {
+class Result1 extends Component {
   state = {};
+
+
+
+
+
   componentDidMount() {
     var key = this.props.match.params.key;
-
+    var uid = this.props.match.params.uid;
     Firebase.database()
-      .ref("CV/" + key)
+      .ref("CV/" + uid + "/" + key)
       .on("value", list => {
         var object = list.val();
         var name = object.Name;
@@ -44,25 +49,95 @@ class Res4 extends Component {
           avatar: ProfileP
         });
       });
+
+
+
+
+
+
+
   }
+
+
+  switchTemplate = (template) => {
+    var Link = "/" + template + "/" + this.props.match.params.key;
+    window.location.href = Link;
+
+  };
+
   render() {
     return (
-      <div>
-        <img src={this.state.avatar} />
-        <h3>{this.state.name}</h3>
-        <h3>{this.state.PT}</h3>
-        <h3>{this.state.PhoneNumber}</h3>
-        <h3>{this.state.Gmail}</h3>
-        <h3>{this.state.Major}</h3>
-        <h3>{this.state.NameOfUniversity}</h3>
-        <h3>{this.state.Degree}</h3>
-        <h3>{this.state.Skills}</h3>
-        <h3>{this.state.Profile}</h3>
-        <h3>{this.state.WE}</h3>
-        <h3>{this.state.JT}</h3>
-        <h3>{this.state.IN}</h3>
+      <div className="App-headerLight">
+        <div className="LogoAndNameTemplate4">
+          <img className="dev_logo" src={this.state.avatar} />
+          <h3>{this.state.name} </h3>
+          <h5 className='TextWithShadow'>
+            {this.state.address} | {this.state.Gmail} | {this.state.PhoneNumber}{" "}
+          </h5>
+          <hr className="line" />
+        </div>
+
+        <div className="AllCvs">
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Proffesional title</p>
+            <h5 className='DarkText'>{this.state.PT} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Major</p>
+            <h5 className='DarkText'>{this.state.Major} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Name of university</p>
+            <h5 className='DarkText'>{this.state.NameOfUniversity} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Degrees</p>
+            <h5 className='DarkText'>{this.state.Degree} </h5>
+          </div>
+        </div>
+        <div className="AllCvs">
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Major</p>
+            <h5 className='DarkText'>{this.state.Major} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Skills</p>
+            <h5 className='DarkText'>{this.state.Skills} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Work experiance</p>
+            <h5 className='DarkText'>{this.state.WE} </h5>
+          </div>
+
+          <div className="CvElmntLight">
+            <p className="Cv_titleLight">Jop title</p>
+
+            <h5 className='DarkText'>{this.state.JT} </h5>
+          </div>
+
+
+
+        </div>
+
+        <div className="Footer">
+          <a className='FooterObj' href={"/template1/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template1</a>
+          <a className='FooterObj' href={"/template2/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template2</a>
+          <a className='FooterObj' href={"/template3/" + this.props.match.params.uid + "/" + this.props.match.params.key} > Template3</a>
+          <a className='FooterObj' href={"/template4/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template4</a>
+          <a className='FooterObj' href={"/template5/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template5</a>
+
+        </div>
+        {/* <button className="button_a" onClick={this.switchTemplate('template1')}>
+          Template 1
+        </button> */}
+
       </div>
     );
   }
 }
-export default Res4;
+export default Result1;

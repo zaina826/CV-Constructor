@@ -1,5 +1,5 @@
 .background {
-  background-color: blanchedalmond;
+  background-color: rgb(59, 43, 18);
 }
 .bothflexes {
   display: flex;
@@ -39,10 +39,13 @@ html h1 {
 html h2 {
   font-size: 35px;
   background-color: #1d7d9e;
+  border-radius: 10px;
+  padding:10px
 }
 .h2s {
   font-family: Verdana;
-  font-size: 45px;
+  font-size: 20px;
+  text-align: center;
   margin-bottom: 0px;
 }
 .smallimage {
@@ -50,6 +53,24 @@ html h2 {
   height: 35px;
   margin-right: 10px;
 }
+
+.TextWithLogo{
+  border-width: 2px;
+  background-color:#1d7d9e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px
+}
+
+.GmailText {
+  width: 225px;
+  font-size: 24px;
+  height: 60px;
+  margin-right: 10px;
+  justify-content: center;
+  float: left;
+}
+
 .socialmedia {
   width: 105px;
   height: 105px;
