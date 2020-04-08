@@ -230,6 +230,27 @@ box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
 transition: all 0.4s ease 0s;
 }
 
+.CvElmntT5 {
+  margin: 20px;
+  background-color: #c0392b;
+  align-items: center;
+  border: 2px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 250px;
+  height: 300px;
+  -webkit-box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 38px 6px rgba(0,0,0,0.75);
+transition: all 0.4s ease 0s;
+}
+
+.CvElmntT5:hover{
+  background-color: #e74c3c;
+
+}
+
+
 .TextWithShadow{
   -webkit-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
 -moz-box-shadow: 10px 10px 121px 6px rgba(0,0,0,1);
@@ -519,6 +540,11 @@ color:white
 
 .line {
   width: 700px;
+  border-bottom: 2px solid white;
+}
+
+.lineT5 {
+  width: 350px;
   border-bottom: 2px solid white;
 }
 

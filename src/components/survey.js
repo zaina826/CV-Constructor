@@ -122,7 +122,7 @@ export default class Survey1 extends Component {
         JT: this.state.JT,
         profileP: this.state.avatarURL
       }).key
-    var finalLink = "/" + this.props.match.params.template + "/" + Firebase.auth().uid + "/" + key;
+    var finalLink = "/" + this.props.match.params.template + "/" + Firebase.auth().currentUser.uid + "/" + key;
     console.log(this.props.match.params.template)
     this.setState({ loadingMessege: "Loading your CV..." });
     setTimeout(() => {
