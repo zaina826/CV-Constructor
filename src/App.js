@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "./components/result3.css";
+// import "./components/result3.css";
 import "./components/main.css";
 import Home from "./components/home";
 import Aboutus from "./components/aboutus";
@@ -33,7 +33,6 @@ export default class MainPage extends Component {
             <Route
               path="/result3/:key"
               component={Res3}
-              classname="background"
             />
             <Route path="/result4/:key" component={Res4} />
             <Route path="/selecttemplate" component={SelectT} />

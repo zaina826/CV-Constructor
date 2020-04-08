@@ -1,7 +1,7 @@
-html body {
+html, body {
   text-align: center;
   background-image: url("bgimg.jpg");
-  width: 70%;
+  width: 100%;
   width: 100%;
   height: 100%;
 }
@@ -42,7 +42,7 @@ html h2 {
   color: black;
 }
 .A:hover {
-  background: #434343;
+  background: thistle;
   letter-spacing: 10px;
   transition: all 0.4s ease 0s;
 }
@@ -281,4 +281,7 @@ html h2 {
   color: black;
   border-color: white;
   margin: 10px;
+}
+.Background{
+  background-color: black;
 }
