@@ -1,133 +1,106 @@
 
-
+import logo from "./logo.png"
 import React, { Component } from "react";
-import Firebase from "./database";
 import './main.css'
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
 class Result1 extends Component {
-  state = {};
-  componentDidMount() {
-    var key = this.props.match.params.key;
-    var uid = this.props.match.params.uid;
-    Firebase.database()
-      .ref("CV/" + uid + "/" + key)
-      .on("value", list => {
-        var object = list.val();
-        var name = object.Name;
-        var address = object.Address;
-        var PT = object.PT;
-        var PhoneNumber = object.PN;
-        var Gmail = object.Gmail;
-        var Major = object.Major;
-        var NameOfUniversity = object.NOU;
-        var Degree = object.Degree;
-        var Skills = object.Skills;
-        var Profile = object.Profile;
-        var WE = object.WE;
-        var JT = object.JT;
-        var In = object.In;
-        var ProfileP = object.profileP;
-
-        this.setState({
-          name: name,
-          address: address,
-          PT: PT,
-          PhoneNumber: PhoneNumber,
-          Gmail: Gmail,
-          Major: Major,
-          NameOfUniversity: NameOfUniversity,
-          Degree: Degree,
-          Skills: Skills,
-          Profile: Profile,
-          WE: WE,
-          JT: JT,
-          In: In,
-          avatar: ProfileP
-        });
-      });
-  }
+  GetImg = () => {
+    html2canvas(document.getElementById("appheader")).then(function (canvas) {
+      var img = canvas.toDataURL()
+      saveAs(img, "pretty image.png");
+    });
+  };
   render() {
     return (
-      <div className="template2MainDiv">
+      <div >
+        <div id="appheader">
+          <div className="AllCvs2" >
 
 
-        <div className='template2SecondaryDiv' >
-          <img className="dev_logoT2" src={this.state.avatar} />
+            <div className='template2SecondaryDiv' >
+              <img className="profpic" src={logo} />
+              <h1 className='template2MainDivElmnts' contentEditable="true">Your first and last name</h1>
+              <hr />
+              <h1 className='template2MainDivElmnts' contentEditable="true">Address, City, State</h1>
+              <hr />
+              <h1 className='template2MainDivElmnts' contentEditable="true">+08 7940 784</h1>
+              <hr />
+              <h1 className='template2MainDivElmnts' contentEditable="true">yourgmail@gmail.com</h1>
+              <hr />
+              <h1 className='template2MainDivElmnts' contentEditable="true">Facebook username</h1>
 
-          <h1 className='template2MainDivElmnts'>{this.state.name}</h1>
-          <hr />
-          <h1 className='template2MainDivElmnts'>{this.state.address}</h1>
-          <hr />
-          <h1 className='template2MainDivElmnts'>{this.state.PhoneNumber}</h1>
-          <hr />
-          <h1 className='template2MainDivElmnts'>{this.state.Gmail}</h1>
-          <hr />
-          <h1 className='template2MainDivElmnts'>{this.state.In}</h1>
+
+            </div>
 
 
+            <div className='template2MainDivElmnts'>
+
+
+              <div className="AllCvs13">
+                <div className="CvElmnt">
+                  <p className="Cv_title">Proffesional title</p>
+                  <h5 contentEditable="true">Your proffesional title </h5>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Major</p>
+                  <h5 contentEditable="true">Your university major </h5>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Name of university</p>
+                  <h5 contentEditable="true">Name of your university </h5>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Degrees</p>
+                  <h5 contentEditable="true">Degree of major</h5>
+                </div>
+              </div>
+              <div className="AllCvs23">
+                <div className="CvElmnt">
+                  <p className="Cv_title">Major</p>
+                  <h5 contentEditable="true">Your university major</h5>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Skills</p>
+                  <ol>
+                    <li contentEditable="true">First Skill</li>
+                    <li contentEditable="true">Second Skill </li>
+                    <li contentEditable="true">Third Skill</li>
+                    <li contentEditable="true">Fourth Skill</li>
+
+                  </ol>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Work experience</p>
+                  <ol>
+                    <li contentEditable="true">Your first job </li>
+                    <li contentEditable="true">Your second job </li>
+                    <li contentEditable="true">Your third job </li>
+                    <li contentEditable="true">Your fourth job</li>
+                  </ol>
+                </div>
+
+                <div className="CvElmnt">
+                  <p className="Cv_title">Job title</p>
+
+                  <h5 contentEditable="true">Your job title</h5>
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+          </div>
         </div>
-
-
-        <div className='template2MainDivElmnts'>
-
-
-          <div className="AllCvs">
-            <div className="CvElmnt">
-              <p className="Cv_title">Proffesional title</p>
-              <h5>{this.state.PT} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Name of university</p>
-              <h5>{this.state.NameOfUniversity} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Degrees</p>
-              <h5>{this.state.Degree} </h5>
-            </div>
-          </div>
-          <div className="AllCvs">
-            <div className="CvElmnt">
-              <p className="Cv_title">Major</p>
-              <h5>{this.state.Major} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Skills</p>
-              <h5>{this.state.Skills} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Work experiance</p>
-              <h5>{this.state.WE} </h5>
-            </div>
-
-            <div className="CvElmnt">
-              <p className="Cv_title">Jop title</p>
-
-              <h5>{this.state.JT} </h5>
-            </div>
-          </div>
-
-          <div className="Footer">
-            <a className='FooterObj' href={"/template1/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template1</a>
-            <a className='FooterObj' href={"/template2/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template2</a>
-            <a className='FooterObj' href={"/template3/" + this.props.match.params.uid + "/" + this.props.match.params.key} > Template3</a>
-            <a className='FooterObj' href={"/template4/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template4</a>
-            <a className='FooterObj' href={"/template5/" + this.props.match.params.uid + "/" + this.props.match.params.key} >Template5</a>
-
-          </div>
-
-
-        </div>
-
-
-
+        <a className='FooterObj' onClick={this.GetImg} >Download your CV</a>
       </div>
     );
   }

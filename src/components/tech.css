@@ -1,0 +1,16 @@
+.bgtech{
+    background-image: url("./bgtech.jpg");
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 1689px;
+    padding-top: 20px;
+  }
+.white{
+    background-color: white;
+    margin-left:2.5%;
+    width:1000;
+    margin-right:2.5%;
+    border-radius: 30px;
+    padding: 5px;
+    height:900px;
+}

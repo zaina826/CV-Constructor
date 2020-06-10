@@ -40,8 +40,7 @@ background-color: #282c34;
 width: 100%;
 height: 100%;
 min-height: 100% !important;
-height: 100%;
-color:white  
+height: 100%;  
 
 }
 .template2SecondaryDiv {
@@ -72,11 +71,6 @@ color:white
 
   transition: all 0.4s ease 0s;
 
-}
-.template2MainDivElmnts{
-      align-items: center;
-      margin-left: 10%;
-      font-size:20px
 }
 
 .template2MainDiv {
@@ -111,8 +105,8 @@ color:white
 }
 .template2MainDivElmnts{
       align-items: center;
-      margin-left: 10%;
-      font-size:20px
+      margin-left: 5%;
+      font-size:20px;
 }
 
 
@@ -149,12 +143,36 @@ color:white
   }
   .template3MainDivElmnts{
         align-items: center;
-        margin-left: 10%;
+
         font-size:20px
   }
-.AllCvs {
+.AllCvs1 {
   display: flex;
   flex-direction: row;
+  background-color: #fff;
+  padding-right: 270px;
+  padding-left:270px;
+  
+}
+.AllCvs2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #2c3e50;
+
+}
+.AllCvs13 {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+
+  
+}
+.AllCvs23 {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding-bottom:100px;
+  
 }
 .CvElmnt {
   margin: 20px;
@@ -182,6 +200,15 @@ color:white
   color:white
   }
 
+.uploader{
+
+
+  font-size:24px;
+  border-width: 5px;
+  border-radius: 5px;
+
+
+}
 
 .Cv_title {
   background-color: #34495e;
@@ -196,6 +223,7 @@ color:white
 .Footer{
   margin: 10px;
 }
+
 .FooterObj{
   margin:10px;
   text-decoration: none;
@@ -207,19 +235,20 @@ color:white
   transition: all 0.4s ease 0s;
   color: white;
   border-radius: 10px;
-  padding:5px
+  padding-left:250px;
+  padding-right:250px
 }
 
 
 .FooterObj:hover{
   opacity: 90%;
-  border-radius: 20px
+  border-radius: 0px
 }
 
 
 .CvElmntLight {
   margin: 20px;
-  background-color: #f5f6fa;
+  background-color: #2c3e50;
   align-items: center;
   border: 2px;
   padding: 10px;
@@ -332,7 +361,7 @@ color:white
   transition: all 0.4s ease 0s;
 }
 .App-header {
-  background-color: #282c34;
+  background-image: url(./bgimg.jpg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -352,12 +381,27 @@ color:white
 .App-link {
   color: #09d3ac;
 }
+.homepara{
+  background-color:thistle;
+  margin-left:200px;
+  margin-right:200px;
+  font-size: 40px;
+  border-radius: 30px;
+}
+.homepara:hover{
+  background-color:white;
+  margin-left:100px;
+  margin-right:100px;
+  border-radius: 30px;
+  color:black;
+  transition: all 1s ease 0s;
+}
 .button_a {
   margin-top: 10px;
-  font-size: 20px;
-  color: #fff !important;
+  font-size: 80px;
+  color: lightblue !important;
   text-decoration: none;
-  background: #ed3330;
+  background: white;
   padding: 5px;
   border-radius: 10px;
   display: inline-block;
@@ -375,28 +419,37 @@ color:white
 
 .navbar {
   background-color: #434343;
-  padding: 10px;
-  margin: auto;
+  padding: 30px;
   align-items: center;
 }
 
 .navbar_e {
-  margin-left: 40%;
+  margin-left: 10%;
   align-items: center;
+  margin-top: -80px;
 }
 
 .navbar_elmnts {
   padding: 5px;
-  margin: 5px;
-  color: white;
+  margin: 15px;
+  color:white;
+  font-size: 35px;
   text-decoration: none;
+  margin-top:0px;
+
+}
+.navlogo{
+  width:7.2%;
+  margin-top:-20px;
+
+
 }
 
 .navbar_elmnts:hover {
   padding: 10px;
   margin: 10px;
   color: black;
-  background-color: white;
+  background-color: lightblue;
   text-decoration: none;
   border-style: solid;
   border-width: 2px;
@@ -505,6 +558,56 @@ color:white
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
+}
+
+.SurInput{
+  color:white;
+  border: none;
+  outline:none;
+  height:30px;
+  transition:height 1s;
+  background-color:transparent;
+  font-size:24px;
+  
+  }
+
+  .InfoInput{
+    color:white;
+    border: none;
+    outline:none;
+    height:30px;
+    transition:height 1s;
+    background-color:transparent;
+    font-size:15px;
+    
+    }
+
+  .AddressesInTemplates{
+    align-items: center;
+    justify-content: center;
+    display: -webkit-inline-box;
+    margin:5px
+  }
+
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+.txtInputTemplate4::placeholder{
+  color:black;
+  opacity:1
+}
+.txtInputTemplate4{
+  color:black;
+  border: none;
+  outline:none;
+  height:30px;
+  transition:height 1s;
+  background-color:transparent;
+  font-size:15px;
+  
 }
 
 .dev_logo:hover {
