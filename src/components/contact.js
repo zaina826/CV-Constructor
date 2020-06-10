@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import "./main.css";
-
+import fire from "./database";
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 class ContactUs extends Component {
-
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Contact us at</h1>
-          <h2 className="button_a">zainaschaban@gmail.com</h2>
-          <h1>Or:</h1>
-          <h2 className="button_a">subhi.ashraf912@gmail.com</h2>
+          <h1>ContactUs PAGE</h1>
+          <h3>Zaina Schaban</h3>
 
+          <a className="FooterObj">zainaschaban@gmail.com</a>
+          <h3>Sobhi Ashraf </h3>
+
+          <a className="FooterObj">subhi.ashraf912@gmail.com</a>
         </header>
       </div>
     );

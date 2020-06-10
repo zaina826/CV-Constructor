@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FileUploader from "react-firebase-file-uploader";
+import Firebase from "./database";
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
 

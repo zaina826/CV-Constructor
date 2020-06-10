@@ -9,7 +9,7 @@ export default class Sobhi extends Component {
         <h4>Sobhi Ashraf</h4>
         <hr className="line" />
         <div className="dev_data">
-          <p className="aboutpar">
+          <p className="dev_data">
             Sobhi Ashraf: 17 years old, from Deir al-Balah, started programing
             since 2016, by creating blogger templates <br /> then started
             creating wordpress templates in 2018 beginnings, then I joined

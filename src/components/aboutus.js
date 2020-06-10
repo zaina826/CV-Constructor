@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import fire from "./database";
 import sobhi from "./sobhi.jpg";
 import zaina from "./zaina.jpg";
-import ".//main.css"
 export default class Aboutus extends Component {
   render() {
     return (
@@ -12,7 +12,7 @@ export default class Aboutus extends Component {
             <img className="dev_logo" src={sobhi} />
             <br />
             <p className="dev_name">Sobhi Ashraf</p>
-            <a className="button_a" href="./sobhi">
+            <a href="/sobhi" className="button_a">
               See profile
             </a>
             <br />
@@ -21,8 +21,10 @@ export default class Aboutus extends Component {
           <div className="person">
             <img className="dev_logo" src={zaina} />
             <br />
-            <p>Zaina Abu Shaban</p>
-            <a className="button_a" href="./zaina">See profile</a>
+            <p>Zaina Abu Shaaban</p>
+            <a href="/zaina" className="button_a">
+              See profile
+            </a>{" "}
           </div>
         </div>
       </div>

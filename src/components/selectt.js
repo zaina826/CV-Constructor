@@ -7,33 +7,29 @@ import temp3pic from "./template3.png";
 import temp4pic from "./template4.png";
 import temp5pic from "./template5.png";
 
-
 export default class SelectT extends Component {
   render() {
     return (
       <div className="App-header">
         <h1> Step 1: Choose a template..</h1>
         <div>
-          <Link to="/result1">
+          <Link to="/template1">
             <img className="template_logo" src={temp1pic} />
           </Link>
-          <Link to="/result4">
+          <Link to="/template4">
             <img className="template_logo" src={temp4pic} />
           </Link>
-
         </div>
         <div>
-
-          <Link to="/result3">
+          <Link to="/template3">
             <img className="template_logo" src={temp3pic} />
           </Link>
         </div>
         <div>
-          <Link to="/result2">
+          <Link to="/template2">
             <img className="template_logo" src={temp2pic} />
           </Link>
         </div>
-
       </div>
     );
   }

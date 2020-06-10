@@ -1,26 +1,24 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./main.css";
-import navlogo from "./navlogo.png"
+import fire from "./database";
+import logo from "./logohead.png";
 export default class Navbar extends Component {
-
   render() {
     return (
-
       <div className="navbar">
-        <img src={navlogo} className="navlogo" />
         <div className="navbar_e">
+          <img src={logo} className="logo-image" />
           <NavLink className="navbar_elmnts" to="/">
             Home
           </NavLink>
           <NavLink className="navbar_elmnts" to="/aboutus">
-            About us
+            Aboutus
           </NavLink>
           <NavLink className="navbar_elmnts" to="/contactus">
-            Contact us
+            Contact
           </NavLink>
         </div>
-
       </div>
     );
   }
