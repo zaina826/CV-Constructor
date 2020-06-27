@@ -6,16 +6,12 @@ In the project directory, you can run:
 
 ### `Screenshots`
 ![GitHub Logo](/screens/1.png)
-Format: ![Alt Text](url)
 
 ![GitHub Logo](/screens/2.png)
-Format: ![Alt Text](url)
 
 ![GitHub Logo](/screens/3.png)
-Format: ![Alt Text](url)
 
 ![GitHub Logo](/screens/4.png)
-Format: ![Alt Text](url)
 
 ### `npm start`
 
